@@ -1,0 +1,10 @@
+CREATE TABLE Brand (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Item (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    brand_id INTEGER REFERENCES Brand(id)
+);
